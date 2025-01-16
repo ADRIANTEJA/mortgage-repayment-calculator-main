@@ -29,9 +29,20 @@ p {
     color: var(--light-font-color);
 }
 
-.complete-form-p {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+.bold-text-item {
+    font-weight: bold;
+}
+
+.input {
+    border: none;
+    outline: none;
+    margin: 1px;
+    padding-left: 1rem;
+}
+
+.field {
+    border: 1px solid var(--dark-font-color);
+    border-radius: 0.3rem;
 }
 
 .main-grid {
@@ -41,26 +52,27 @@ p {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-    height: 60%;
+    height: 65%;
     min-height: 480px;
     width: 50%;
     min-width: 320px;
 }
 
 .calculator-grid {
-    height: 100%;
-    width: 100%;
     border-radius: inherit;
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: 0.5fr 0.5fr 1fr 1.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 0.5fr;
+    row-gap: 1rem;
+    height: 100%;
+    width: 100%;
 }
 
 .calculator-header-grid {
     display: grid;
     grid-auto-flow: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 2.75rem;
+    margin-right: 2.75rem;
 }
 
 .calculator-name {
@@ -79,27 +91,81 @@ p {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
-    grid-template-rows: 2rem 3rem;
+    grid-template-rows: 2.5rem 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
-.mortgage-amount-text {
-    text-align: left;
-}
-
 .mortgage-amount-field {
-    background-color: var(--viewport-background-color);
     border: 1px solid var(--dark-font-color);
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 2.8rem 1fr;
+    grid-template-columns: 2.8rem minmax(4rem, auto);
+    height: 3rem;
 }
 
-.mortgage-amount-input {
-    border: none;
-    outline: none;
+.amount-currency-symbol-label {
+    background-color: var(--viewport-background-color);
+    border-radius: 0.3rem 0 0 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.term-interest-rate-grid {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    grid-template-rows: 2.5rem 3rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.mortgage-term-label {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.mortgage-term-field {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(4rem, auto) 4rem;
+    grid-row: 2;
+    grid-column: 1;
+    height: 3rem;
+}
+
+.mortgage-term-timeframe-label {
+    background-color: var(--viewport-background-color);
+    border-radius: 0 0.3rem 0.3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest-rate-label {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.interest-rate-field {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: minmax(4rem, auto) 2.8rem;
+    grid-row: 2;
+    grid-column: 2;
+    height: 3rem;
+}
+
+.interest-rate-unit-label {
+    background-color: var(--viewport-background-color);
+    border-radius: 0 0.3rem 0.3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .result-grid {
@@ -112,10 +178,22 @@ p {
     align-items: center;
 }
 
-.complete-the-form {
-    margin-top: 0px;
+.complete-form-p {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
 }
 
 .attribution {
     margin-top: 100px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }

@@ -15,7 +15,7 @@
 
   <div class="main-grid">
 
-    <div class="calculator-grid">
+    <form class="calculator-grid">
       
       <div class="calculator-header-grid">
         <h2 class="dark-text-item calculator-name">Mortgage Calculator</h2>
@@ -23,14 +23,27 @@
       </div>
 
       <div class="mortgage-amount-grid">
-        <p class="dark-text-item mortgage-amount-text">Mortgage Amount</p>
-
-        <div class="mortgage-amount-field">
-          <p class="dark-text-item amount-currency-symbol">£</p>
-          <input type="number" class="dark-text-item mortgage-amount-input">
+        <label for="mortgage-amount-input" class="dark-text-item">Mortgage Amount</label>
+        <div class="field mortgage-amount-field">
+          <label for="mortgage-amount-input" class="dark-text-item bold-text-item amount-currency-symbol-label">£</label>
+          <input id="mortgage-amount-input" type="number" class="input dark-text-item bold-text-item">
         </div>
       </div>
-    </div>
+
+      <div class="term-interest-rate-grid">
+        <label for="mortgage-term-input" class="dark-text-item mortgage-term-label">Mortgage Term</label>
+        <div class="field mortgage-term-field">
+          <input id="mortgage-term-input" type="number" class="input dark-text-item bold-text-item">
+          <label for="mortgage-term-input" class="dark-text-item bold-text-item mortgage-term-timeframe-label">Years</label>
+        </div>
+
+        <label for="interest-rate-input" class="dark-text-item interest-rate-label">Interest Rate</label>
+        <div class="field interest-rate-field">
+          <input id="interest-rate-input" type="number" class="input dark-text-item bold-text-item">
+          <label for="interest-rate-input" class="dark-text-item bold-text-item interest-rate-unit-label">%</label>
+        </div>
+      </div>
+    </form>
 
     <div class="result-grid">
       <img src="./assets/images/illustration-empty.svg">
