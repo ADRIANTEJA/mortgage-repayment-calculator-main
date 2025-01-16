@@ -1,0 +1,121 @@
+body {
+    background-color: var(--viewport-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+* {
+    font-family: Plus Jakarta Sans;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.dark-text-item {
+    color: var(--dark-font-color);
+}
+
+.light-text-item {
+    color: var(--light-font-color);
+}
+
+.complete-form-p {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.main-grid {
+    background-color: var(--main-background-color);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    border-radius: 1.25rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    height: 60%;
+    min-height: 480px;
+    width: 50%;
+    min-width: 320px;
+}
+
+.calculator-grid {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1.5fr 0.5fr;
+}
+
+.calculator-header-grid {
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.calculator-name {
+    text-align: left;
+}
+
+.clear-all-button {
+    background-color: inherit;
+    text-decoration: underline;
+    border-width: 0;
+    font-size: 1rem;
+    justify-self: end;
+}
+
+.mortgage-amount-grid {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    grid-template-rows: 2rem 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.mortgage-amount-text {
+    text-align: left;
+}
+
+.mortgage-amount-field {
+    background-color: var(--viewport-background-color);
+    border: 1px solid var(--dark-font-color);
+    border-radius: 0.25rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2.8rem 1fr;
+}
+
+.mortgage-amount-input {
+    border: none;
+    outline: none;
+}
+
+.result-grid {
+    height: 100%;
+    background-color: var(--dark-background-color);
+    border-radius:0rem 1.25rem 1.25rem 4.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete-the-form {
+    margin-top: 0px;
+}
+
+.attribution {
+    margin-top: 100px;
+}
