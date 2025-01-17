@@ -19,39 +19,92 @@
       
       <div class="calculator-header-grid">
         <h2 class="dark-text-item calculator-name">Mortgage Calculator</h2>
-        <button type="button" class="dark-text-item clear-all-button">Clear All</button>
+        <button type="reset" class="dark-text-item clear-all-button">Clear All</button>
       </div>
 
       <div class="mortgage-amount-grid">
         <label for="mortgage-amount-input" class="dark-text-item">Mortgage Amount</label>
         <div class="field mortgage-amount-field">
-          <label for="mortgage-amount-input" class="dark-text-item bold-text-item amount-currency-symbol-label">£</label>
-          <input id="mortgage-amount-input" type="number" class="input dark-text-item bold-text-item">
+          <label for="mortgage-amount-input" class="semi-dark-text-item bold-text-item amount-currency-symbol-label">£</label>
+          <input id="mortgage-amount-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
         </div>
       </div>
 
       <div class="term-interest-rate-grid">
         <label for="mortgage-term-input" class="dark-text-item mortgage-term-label">Mortgage Term</label>
         <div class="field mortgage-term-field">
-          <input id="mortgage-term-input" type="number" class="input dark-text-item bold-text-item">
-          <label for="mortgage-term-input" class="dark-text-item bold-text-item mortgage-term-timeframe-label">Years</label>
+          <input id="mortgage-term-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
+          <label for="mortgage-term-input" class="semi-dark-text-item bold-text-item mortgage-term-timeframe-label">Years</label>
         </div>
 
         <label for="interest-rate-input" class="dark-text-item interest-rate-label">Interest Rate</label>
         <div class="field interest-rate-field">
-          <input id="interest-rate-input" type="number" class="input dark-text-item bold-text-item">
-          <label for="interest-rate-input" class="dark-text-item bold-text-item interest-rate-unit-label">%</label>
+          <input id="interest-rate-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
+          <label for="interest-rate-input" class="semi-dark-text-item bold-text-item interest-rate-unit-label">%</label>
         </div>
       </div>
+
+      <div class="mortgage-type-grid">
+        <label class="dark-text-item mortgage-type-field-label">Mortgage Type</label>
+        <div class="option-field mortgage-type-field repayment-type">
+          <input id="repayment-input" type="radio" name="morgage-type" class="input mortgage-type-input" value="1">
+          <span class="checkmark"></span>
+          <label for="repayment-input" class="dark-text-item bold-text-item mortgage-type-label">Repayment</label>
+        </div>
+        <div class="option-field mortgage-type-field interest-only-field">
+          <input id="interest-only-input" type="radio" name="morgage-type" class="input mortgage-type-input" value="2">
+          <span class="checkmark"></span>
+          <label for="interest-only-input" class="dark-text-item bold-text-item mortgage-type-label">Interest Only</label>
+        </div>
+      </div>
+
+      <button type="submit" class="dark-text-item bold-text-item calculate-repayments-button">
+        <img class="calculator-icon" src="./assets/images/icon-calculator.svg">
+        <span>Calculate Repayments</span>
+      </button>
     </form>
 
     <div class="result-grid">
+      <h2>Your results</h2>
+      <p>
+        Your results are shown below based on the information you provided. To adust the results,
+         edit the form and click "Calculate Repayments" again.
+      </p>
+      <div class="results-outer-container">
+        <div class="results-inner-container">
+            <p>Your monthy repayments</p>
+            <output id="mortgage-calculation-result"></output>
+            <div class="results-divider"></div>
+            <p>Total you'll repay over the term</p>
+            <output class="repay-over-the-term-result"></output>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-grid">
       <img src="./assets/images/illustration-empty.svg">
-      <h2 class="light-text-item">Results shown here</h2>
+      <h2 class="white-text-items">Results shown here</h2>
       <p class="light-text-item complete-form-p">
         Complete the form and click "calculate repayments" to see
         what your monthly repayments would be.
       </p>
+    </div>
+
+    <div class="result-grid output">
+      <h2 class="white-text-items">Your results</h2>
+      <p>
+        Your results are shown below based on the information you provided. To adust the results,
+         edit the form and click "Calculate Repayments" again.
+      </p>
+      <div class="results-outer-container">
+        <div class="results-inner-container">
+            <p>Your monthy repayments</p>
+            <output id="mortgage-calculation-result"></output>
+            <div class="results-divider"></div>
+            <p>Total you'll repay over the term</p>
+            <output class="repay-over-the-term-result"></output>
+        </div>
+      </div>
     </div>
   </div>
 

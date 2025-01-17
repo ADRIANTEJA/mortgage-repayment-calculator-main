@@ -2,9 +2,13 @@
   --viewport-background-color: hsl(202, 86%, 94%);
   --main-background-color: hsl(0, 0%, 100%);
   --dark-background-color: hsl(202, 55%, 16%);
+  --darkest-background-color: hsl(202, 56%, 12%);
   --light-font-color: hsl(203, 41%, 72%);
   --white-font-color: hsl(0, 0%, 100%);
+  --semi-dark-font-color: hsl(200, 24%, 40%);
   --dark-font-color: hsl(202, 55%, 16%);
   --box-shadow-color: hsl(0, 0%, 50%);
+  --darker-box-shadow-color: hsl(202, 45%, 8%);
   --field-lime-color: hsl(61, 70%, 52%);
+  --field-lime-trasparent-color: hsla(60, 100%, 70%, 0.3);
 }
