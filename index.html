@@ -6,8 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./CSS/styleSheet.css">
-  <link rel="stylesheet" href="./CSS/fontsheet.css">
-  <link rel="stylesheet" href="./CSS/colorsheet.css">
+  <link rel="stylesheet" href="./CSS/fontSheet.css">
+  <link rel="stylesheet" href="./CSS/colorSheet.css">
+  <link rel="styleSheet" href="./CSS/mobileSheet.css">
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 </head>
@@ -65,23 +66,6 @@
     </form>
 
     <div class="result-grid">
-      <h2>Your results</h2>
-      <p>
-        Your results are shown below based on the information you provided. To adust the results,
-         edit the form and click "Calculate Repayments" again.
-      </p>
-      <div class="results-outer-container">
-        <div class="results-inner-container">
-            <p>Your monthy repayments</p>
-            <output id="mortgage-calculation-result"></output>
-            <div class="results-divider"></div>
-            <p>Total you'll repay over the term</p>
-            <output class="repay-over-the-term-result"></output>
-        </div>
-      </div>
-    </div>
-
-    <div class="result-grid">
       <img src="./assets/images/illustration-empty.svg">
       <h2 class="white-text-items">Results shown here</h2>
       <p class="light-text-item complete-form-p">
@@ -91,18 +75,18 @@
     </div>
 
     <div class="result-grid output">
-      <h2 class="white-text-items">Your results</h2>
-      <p>
+      <h2 class="white-text-items your-results">Your results</h2>
+      <p class="light-text-item your-results-are-shown">
         Your results are shown below based on the information you provided. To adust the results,
          edit the form and click "Calculate Repayments" again.
       </p>
       <div class="results-outer-container">
         <div class="results-inner-container">
-            <p>Your monthy repayments</p>
-            <output id="mortgage-calculation-result"></output>
+            <p class="light-text-item results-orientation">Your monthy repayments</p>
+            <output id="mortgage-calculation-result" class="bold-text-item">£1,797.74</output>
             <div class="results-divider"></div>
-            <p>Total you'll repay over the term</p>
-            <output class="repay-over-the-term-result"></output>
+            <p class="light-text-item repay-orientation">Total you'll repay over the term</p>
+            <output id="repay-over-the-term-result" class="white-text-items">£539,322.94</output>
         </div>
       </div>
     </div>

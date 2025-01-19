@@ -1,0 +1,13 @@
+
+@media (max-width: 39.06rem) {
+    .main-grid {
+        background-color: var(--main-background-color);
+        box-shadow: 0 4px 8px var(--box-shadow-color);
+        border-radius: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 90%;
+        margin-top: 1rem;
+    }
+}

@@ -4,8 +4,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     margin: 0;
 }
 
@@ -19,6 +19,10 @@ h2 {
 
 p {
     text-align: center;
+}
+
+output {
+    overflow-wrap: anywhere;
 }
 
 input {
@@ -95,7 +99,7 @@ input[type="radio"] {
     grid-template-columns: 1fr 1fr;
     position: relative;
     height: 60%;
-    min-height: 32.5rem;
+    min-height: 34.8rem;
     width: 50%;
     min-width: 32.5rem;
     margin-top: 4rem;
@@ -304,20 +308,18 @@ input[type="radio"] {
     border-width: 0;
     border-radius: 2rem;
     font-size: 1rem;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 5fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     align-self: center;
+    gap: 1rem;
     margin-left: 2rem;
     margin-top: 1rem;
-    margin-right: 10rem;
     margin-bottom: 1rem;
     height: 2.8rem;
-}
-
-.calculator-icon {
-    justify-self: end
+    max-width: 60%;
+    min-width: fit-content;
 }
 
 .result-grid {
@@ -327,14 +329,37 @@ input[type="radio"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    grid-column: 2;
-    height: 100%;
-    width: 100%;
 }
 
 .result-grid.output {
-    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    max-height: 100%;
+}
+
+.result-grid, .result-grid.output {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+h2.your-results {
+    justify-self: end;
+    margin: 0;
+    margin-top: 2.2rem;
+}
+
+p.your-results-are-shown {
+    text-align: start;
+    margin: 0;
+}
+
+.result-grid.output > * {
+    align-self: flex-start;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .result-grid > * {
@@ -342,25 +367,61 @@ input[type="radio"] {
     margin-right: 1.25rem;
 }
 
+.results-orientation {
+    text-align: left;
+    align-self: flex-end;
+}
+
+#mortgage-calculation-result {
+    color: var(--field-lime-color);
+    font-size: 3.4rem;
+    align-self: center;
+}
+
 .results-outer-container {
     background-color: var(--field-lime-color);
     border-radius: 0.5rem;
-    display: grid;
-    grid-auto-flow: row;
-    align-items: center;
-    height: 50%;
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    flex: 0.75;
     box-shadow: 0 6px 4px var(--darker-box-shadow-color);
+    min-width: 85%;
+    min-height: 40%;
+    margin-top: 0.6rem;
+    margin-right: 1.5rem;
 }
 
 .results-inner-container {
     background-color: var(--darkest-background-color);
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     display: grid;
-    justify-self: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 1.8%;
+    grid-auto-flow: row;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: stretch;
+    flex: 1;
+    margin-top: 1%;
+}
+
+.results-inner-container > * {
+    text-align: left;
+    margin: 0;
+    margin-left: 2rem;
+}
+
+.results-divider {
+    background-color: var(--semi-dark-font-color);
+    align-self: center;
+    height: 1px;
+    margin-right: 2rem;
+}
+
+.repay-orientation {
+    align-self: flex-end;
+}
+
+#repay-over-the-term-result {
+    align-self: center;
+    font-size: 1.5rem;
 }
 
 .attribution {
