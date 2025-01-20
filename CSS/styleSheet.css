@@ -1,11 +1,17 @@
+html {
+    box-sizing: content-box;
+}
+
 body {
     background-color: var(--viewport-background-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100dvh;
-    width: 100dvw;
+    justify-content: center;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
     margin: 0;
 }
 
@@ -98,11 +104,15 @@ input[type="radio"] {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    height: 60%;
-    min-height: 34.8rem;
-    width: 50%;
-    min-width: 32.5rem;
-    margin-top: 4rem;
+    min-width: min-content;
+    width: 55rem;
+    margin-top: 5%;
+}
+
+@media (width <= 55rem) {
+    .main-grid {
+        width: 100%;
+    }
 }
 
 .calculator-grid {
@@ -110,16 +120,14 @@ input[type="radio"] {
     display: grid;
     grid-auto-flow: row;
     grid-template-rows: auto auto auto auto auto auto;
-    height: 100%;
-    width: 100%;
+    row-gap: 1rem;
+    margin-inline: 2rem;
+    padding-top: 2rem;
 }
 
 .calculator-header-grid {
     display: grid;
     grid-auto-flow: column;
-    margin-left: 2rem;
-    margin-top: 0.8rem;
-    margin-right: 2rem;
 }
 
 .calculator-name {
@@ -140,8 +148,6 @@ input[type="radio"] {
     grid-auto-flow: row;
     align-items: center;
     grid-template-rows: 2.5rem 3rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 .mortgage-amount-field {
@@ -174,8 +180,6 @@ input[type="radio"] {
     grid-template-rows: 2.5rem 3rem;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 .mortgage-term-label {
@@ -244,9 +248,7 @@ input[type="radio"] {
     align-items: center;
     grid-template-rows: 2.5rem 3rem 3rem;
     row-gap: 0.5rem;
-    margin-left: 2rem;
     margin-top: -0.5rem;
-    margin-right: 2rem;
 }
 
 #repayment-input {
@@ -314,7 +316,6 @@ input[type="radio"] {
     justify-content: center;
     align-self: center;
     gap: 1rem;
-    margin-left: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     height: 2.8rem;
@@ -329,6 +330,7 @@ input[type="radio"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
 }
 
 .result-grid.output {
@@ -337,7 +339,7 @@ input[type="radio"] {
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
-    max-height: 100%;
+    padding-bottom: 6rem;
 }
 
 .result-grid, .result-grid.output {
@@ -347,24 +349,18 @@ input[type="radio"] {
 
 h2.your-results {
     justify-self: end;
-    margin: 0;
-    margin-top: 2.2rem;
 }
 
-p.your-results-are-shown {
-    text-align: start;
-    margin: 0;
-}
-
-.result-grid.output > * {
-    align-self: flex-start;
+.result-grid > * {
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
-.result-grid > * {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+.result-grid.output > * {
+    text-align: start;
+    align-self: stretch;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .results-orientation {
@@ -381,12 +377,10 @@ p.your-results-are-shown {
 .results-outer-container {
     background-color: var(--field-lime-color);
     border-radius: 0.5rem;
+    box-shadow: 0 6px 4px var(--darker-box-shadow-color);
     display: flex;
     flex-direction: column;
-    flex: 0.75;
-    box-shadow: 0 6px 4px var(--darker-box-shadow-color);
-    min-width: 85%;
-    min-height: 40%;
+    flex: 1;
     margin-top: 0.6rem;
     margin-right: 1.5rem;
 }
@@ -404,15 +398,14 @@ p.your-results-are-shown {
 
 .results-inner-container > * {
     text-align: left;
-    margin: 0;
     margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .results-divider {
     background-color: var(--semi-dark-font-color);
-    align-self: center;
     height: 1px;
-    margin-right: 2rem;
+    margin-top: 1rem;
 }
 
 .repay-orientation {
@@ -424,14 +417,9 @@ p.your-results-are-shown {
     font-size: 1.5rem;
 }
 
-.attribution {
-    margin-top: 100px;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
 }
 
 input[type=number] {
