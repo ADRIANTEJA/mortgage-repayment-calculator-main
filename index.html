@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./CSS/styleSheet.css">
+  <link rel="styleSheet" href="./CSS/commonSheet.css">
+  <link rel="stylesheet" href="./CSS/desktopSheet.css">
+  <link rel="styleSheet" href="./CSS/mobileSheet.css">
   <link rel="stylesheet" href="./CSS/fontSheet.css">
   <link rel="stylesheet" href="./CSS/colorSheet.css">
-  <link rel="styleSheet" href="./CSS/mobileSheet.css">
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 </head>
@@ -65,20 +66,11 @@
       </button>
     </form>
 
-    <div class="result-grid">
-      <img src="./assets/images/illustration-empty.svg">
-      <h2 class="white-text-items">Results shown here</h2>
-      <p class="light-text-item complete-form-p">
-        Complete the form and click "calculate repayments" to see
-        what your monthly repayments would be.
-      </p>
-    </div>
-
     <div class="result-grid output">
       <h2 class="white-text-items your-results">Your results</h2>
       <p class="light-text-item your-results-are-shown">
         Your results are shown below based on the information you provided. To adust the results,
-         edit the form and click "Calculate Repayments" again.
+        edit the form and click "Calculate Repayments" again.
       </p>
       <div class="results-outer-container">
         <div class="results-inner-container">
@@ -89,6 +81,15 @@
             <output id="repay-over-the-term-result" class="white-text-items">£539,322.94</output>
         </div>
       </div>
+    </div>
+
+    <div class="result-grid">
+      <img src="./assets/images/illustration-empty.svg">
+      <h2 class="white-text-items">Results shown here</h2>
+      <p class="light-text-item complete-form-p">
+        Complete the form and click "calculate repayments" to see
+        what your monthly repayments would be.
+      </p>
     </div>
   </div>
 </body>

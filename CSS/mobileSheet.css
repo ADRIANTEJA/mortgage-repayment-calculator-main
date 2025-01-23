@@ -1,5 +1,53 @@
+/* sheet used only for structure-like styles in mobile layout such as grid, flexbox etc or item position */
 
-@media (width <= 39.06rem) {
+@media (width <= 40rem) {
+    .main-grid {
+        border-radius: 0;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        margin: 0;
+        min-width: auto;
+        width: auto;
+    }
 
+    .result-grid {
+        border-radius: 0;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .term-interest-rate-grid {
+        display: grid;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-rows: 2.5rem 3rem 2.5rem 3rem;
+        grid-template-columns: 1fr;
+        column-gap: auto;
+    }
+
+    .mortgage-term-label {
+        grid-row: 1;
+        grid-column: 1;
+    }
     
+    .interest-rate-label {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .calculate-repayments-button {
+        margin-right: 0rem;
+    }
+
+    .mortgage-term-field {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .interest-rate-field {
+        grid-row: 4;
+        grid-column: 1;
+    }
 }
