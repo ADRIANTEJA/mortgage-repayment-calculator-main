@@ -5,7 +5,7 @@
         border-radius: 0;
         display: grid;
         grid-auto-flow: row;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1.4fr 1fr;
         grid-template-columns: 1fr;
         margin: 0;
         min-width: auto;
@@ -22,9 +22,13 @@
         display: grid;
         grid-auto-flow: row;
         align-items: center;
-        grid-template-rows: 2.5rem 3rem 2.5rem 3rem;
+        grid-template-rows: 2.5rem 3rem 0 2.5rem 3rem 0;
         grid-template-columns: 1fr;
         column-gap: auto;
+    }
+
+    .term-interest-rate-grid.invalid-input {
+        grid-template-rows: 2.5rem 3rem auto 2.5rem 3rem auto;
     }
 
     .mortgage-term-label {
@@ -33,7 +37,7 @@
     }
     
     .interest-rate-label {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 1;
     }
     
@@ -47,7 +51,16 @@
     }
 
     .interest-rate-field {
-        grid-row: 4;
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .input-error-label.term {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .input-error-label.interest {
+        grid-row: 6;
         grid-column: 1;
     }
 }

@@ -10,6 +10,7 @@
   <link rel="styleSheet" href="./CSS/mobileSheet.css">
   <link rel="stylesheet" href="./CSS/fontSheet.css">
   <link rel="stylesheet" href="./CSS/colorSheet.css">
+  <script defer src="./JS/calculationScript.js"></script>
   
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 </head>
@@ -17,47 +18,51 @@
 
   <div class="main-grid">
 
-    <form class="calculator-grid">
+    <form id="calculator-form" class="calculator-grid">
       
       <div class="calculator-header-grid">
         <h2 class="dark-text-item calculator-name">Mortgage Calculator</h2>
         <button type="reset" class="dark-text-item clear-all-button">Clear All</button>
       </div>
 
-      <div class="mortgage-amount-grid">
+      <div class="mortgage-amount-grid" data-input-error="This field is required">
         <label for="mortgage-amount-input" class="dark-text-item">Mortgage Amount</label>
         <div class="field mortgage-amount-field">
           <label for="mortgage-amount-input" class="semi-dark-text-item bold-text-item amount-currency-symbol-label">£</label>
-          <input id="mortgage-amount-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
+          <input id="mortgage-amount-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999" step="0.01">
         </div>
+        <label for="mortgage-amount-input" class="error-text-item input-error-label">This field is required</label>
       </div>
 
       <div class="term-interest-rate-grid">
         <label for="mortgage-term-input" class="dark-text-item mortgage-term-label">Mortgage Term</label>
         <div class="field mortgage-term-field">
-          <input id="mortgage-term-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
+          <input id="mortgage-term-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999" step="0.01">
           <label for="mortgage-term-input" class="semi-dark-text-item bold-text-item mortgage-term-timeframe-label">Years</label>
         </div>
+        <label for="mortgage-term-input" class="error-text-item input-error-label term">This field is required</label>
 
         <label for="interest-rate-input" class="dark-text-item interest-rate-label">Interest Rate</label>
         <div class="field interest-rate-field">
-          <input id="interest-rate-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999">
+          <input id="interest-rate-input" type="number" class="input dark-text-item bold-text-item" min="0" max="9999999999" step="0.01">
           <label for="interest-rate-input" class="semi-dark-text-item bold-text-item interest-rate-unit-label">%</label>
         </div>
+        <label for="interest-rate-input" class="error-text-item input-error-label interest">This field is required</label>
       </div>
 
       <div class="mortgage-type-grid">
         <label class="dark-text-item mortgage-type-field-label">Mortgage Type</label>
         <div class="option-field mortgage-type-field repayment-type">
-          <input id="repayment-input" type="radio" name="morgage-type" class="input mortgage-type-input" value="1">
+          <input id="repayment-input" type="radio" name="mortgage-type" class="mortgage-type-input" value="1">
           <span class="checkmark"></span>
           <label for="repayment-input" class="dark-text-item bold-text-item mortgage-type-label">Repayment</label>
         </div>
         <div class="option-field mortgage-type-field interest-only-field">
-          <input id="interest-only-input" type="radio" name="morgage-type" class="input mortgage-type-input" value="2">
+          <input id="interest-only-input" type="radio" name="mortgage-type" class="mortgage-type-input" value="2">
           <span class="checkmark"></span>
           <label for="interest-only-input" class="dark-text-item bold-text-item mortgage-type-label">Interest Only</label>
         </div>
+        <label class="error-text-item input-error-label type">This field is required</label>
       </div>
 
       <button type="submit" class="dark-text-item bold-text-item calculate-repayments-button">

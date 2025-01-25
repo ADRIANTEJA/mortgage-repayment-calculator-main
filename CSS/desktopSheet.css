@@ -51,16 +51,26 @@
     display: grid;
     grid-auto-flow: row;
     align-items: center;
-    grid-template-rows: 2.5rem 3rem;
+    grid-template-rows: 2.5rem 3rem 0;
+    overflow: hidden;
+}
+
+.mortgage-amount-grid.invalid-input {
+    grid-template-rows: 2.5rem 3rem auto;
 }
 
 .term-interest-rate-grid {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
-    grid-template-rows: 2.5rem 3rem;
+    grid-template-rows: 2.5rem 3rem 0;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.2rem;
+    overflow: hidden;
+}
+
+.term-interest-rate-grid.invalid-input {
+    grid-template-rows: 2.5rem 3rem auto;
 }
 
 .interest-rate-field {
@@ -82,9 +92,14 @@
     display: grid;
     grid-auto-flow: row;
     align-items: center;
-    grid-template-rows: 2.5rem 3rem 3rem;
+    grid-template-rows: 2.5rem 3rem 3rem 0;
     row-gap: 0.5rem;
     margin-top: -0.5rem;
+    overflow: hidden;
+}
+
+.mortgage-type-grid.invalid-input {
+    grid-template-rows: 2.5rem 3rem 3rem auto;
 }
 
 .mortgage-term-field {
@@ -167,4 +182,15 @@ h2.your-results {
 
 .repay-orientation {
     align-self: flex-end;
+}
+
+.input-error-label.term {
+    grid-column: 1;
+}
+.input-error-label.interest {
+    grid-column: 2;
+}
+
+.input-error-label.type {
+    grid-row: 4;
 }
